@@ -5,7 +5,7 @@ import Input from '../components/Input';
 const mapStateToProps = state => ({
   type: 'text',
   placeholder: 'Search for classname...',
-  className: 'clabbr-sch__inp'
+  className: 'clabbr-ser__inp'
 });
 
 const mapDispatchToProps = dispatch => ({
