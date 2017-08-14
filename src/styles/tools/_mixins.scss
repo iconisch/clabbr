@@ -1,0 +1,51 @@
+// Create a utility
+// --------------------------------
+@mixin utility($property, $value, $modifier: "") {
+  .u-#{$property}--#{$modifier} {
+    #{$property}: $value !important;
+  }
+}
+
+
+// Retina images
+// --------------------------------
+@mixin retina-image($url, $filetype) {
+  background-image: url("../../images/#{$url}.#{$filetype}");
+
+  @include breakpoint("retina") {
+    background-image: url("../../images/#{$url}@2x.#{$filetype}");
+  }
+}
+
+
+// Linear gradient
+// --------------------------------
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
+// Cancel padding
+// --------------------------------
+@mixin cancel-padding($padding) {
+  margin-left: -$padding; margin-right: -$padding;
+}
+
+
+// Clearfix
+// --------------------------------
+@mixin clearfix {
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    flex-basis: 0;
+    order: 1;
+  }
+
+  &::after {
+    clear: both;
+  }
+}

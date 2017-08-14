@@ -1,0 +1,148 @@
+// Breakpoints
+// --------------------------------
+$breakpoints: (
+  "small": 640px,
+  "medium": 960px,
+  "large": 1280px,
+  "x-large": 1600px
+);
+
+
+// Wrapper object widths
+// --------------------------------
+$wrapper-widths: (
+  "2x-small": 320px,
+  "x-small": 480px,
+  "small": 640px,
+  "medium": 960px,
+  "large": 1440px,
+  "x-large": 1600px
+);
+
+
+// Grid object gutters
+// --------------------------------
+$gutters: (
+  "x-small": 24px,
+  "small": 32px,
+  "medium": 48px,
+  "large": 64px
+);
+
+
+// Z-indexes
+// --------------------------------
+$z-indexes: (
+  "x-negative": -2,
+  "negative": -1,
+  "medium": 0,
+  "large": 11,
+  "x-large": 22,
+  "2x-large": 33,
+  "3x-large": 44,
+  "4x-large": 55,
+  "huge": 66,
+  "x-huge": 77,
+  "2x-huge": 88,
+  "3x-huge": 99
+);
+
+
+// Spacing units
+// --------------------------------
+$spacing-units: (
+  "none": 0,
+  "2x-small": 8px,
+  "x-small": 12px,
+  "small": 16px,
+  "medium": 24px,
+  "large": 32px,
+  "x-large": 48px,
+  "2x-large": 64px,
+  "3x-large": 96px,
+  "4x-large": 128px,
+  "huge": 256px,
+  "x-huge": 320px,
+  "2x-huge": 480px,
+  "3x-huge": 640px,
+  "4x-huge": 800px,
+  "giant": 960px,
+  "x-giant": 1280px
+);
+
+
+// Font families
+// --------------------------------
+$font-families: (
+  "system": (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol")
+);
+
+
+// Font-sizes
+// --------------------------------
+$font-sizes: (
+  "x-small": 0.75rem,
+  "small": 0.875rem,
+  "medium": 1rem,
+  "large": 1.125rem,
+  "x-large": 1.25rem,
+  "2x-large": 1.5rem,
+  "3x-large": 2rem,
+  "4x-large": 2.5rem,
+  "huge": 3rem,
+  "x-huge": 4rem
+);
+
+// Heading font-sizes for small and medium screens
+$heading-font-sizes: (
+  "small": (
+    1: font-size("3x-large"),
+    2: font-size("3x-large"),
+    3: font-size("2x-large"),
+    4: font-size("2x-large"),
+    5: font-size("x-large"),
+    6: font-size("large")
+  ),
+  "medium": (
+    1: font-size("huge"),
+    2: font-size("4x-large"),
+    3: font-size("3x-large"),
+    4: font-size("2x-large"),
+    5: font-size("x-large"),
+    6: font-size("large")
+  )
+);
+
+
+// Colors
+// --------------------------------
+$colors: (
+  "primary": lightskyblue,
+
+  "secondary": lightskyblue,
+
+  "success": #bad7bd,
+
+  "warning": #f8d960,
+
+  "error": #f1ba7c,
+
+  // Greys
+  "grey-3x-light": #FAFAFA,
+  "grey-2x-light": #EAEAEA,
+  "grey-x-light": #CACACA,
+  "grey-light": #AAAAAA,
+  "grey": #6A6A6A,
+  "grey-dark": #2A2A2A
+);
+
+
+// Transitions
+// @link https://goo.gl/YT7XK8
+// --------------------------------
+$transitions: (
+  "standard": cubic-bezier(0.4, 0, 0.2, 1),
+  "enter": cubic-bezier(0.0, 0, 0.2, 1),
+  "leave": cubic-bezier(0.4, 0, 1, 1),
+  "bounce": cubic-bezier(0.4, 1.6, 0.6, 0.8)
+);

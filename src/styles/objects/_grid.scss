@@ -1,0 +1,86 @@
+// Grid
+// --------------------------------
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 0;
+  @include cancel-padding(gutter("medium") / 2);
+
+  @include breakpoint("small", "only") {
+    @include cancel-padding(gutter("small") / 2);
+  }
+
+  > .grid__item {
+    position: relative;
+
+    padding-left: gutter("medium") / 2;
+    padding-right: gutter("medium") / 2;
+
+    @include breakpoint("small", "only") {
+      padding-left: gutter("small") / 2;
+      padding-right: gutter("small") / 2;
+    }
+
+
+    // Modifiers
+    // --------------------------------
+    &--1 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    @for $index from 2 through 6 {
+      $denominator: $index;
+
+      @for $divisor from 1 through ($denominator - 1) {
+
+        &--#{$divisor}\/#{$denominator} {
+          flex: 0 0 (100% / $denominator * $divisor);
+          max-width: (100% / $denominator * $divisor);
+        }
+      }
+    }
+
+    // Media query modifiers
+    // --------------------------------
+    @each $breakpoint-name, $breakpoint in $breakpoints {
+
+      &.\@#{$breakpoint-name}--1 {
+
+        @include breakpoint($breakpoint-name, "only") {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
+      @for $index from 2 through 6 {
+        $denominator: $index;
+
+        @for $divisor from 1 through ($denominator - 1) {
+
+          &.\@#{$breakpoint-name}--#{$divisor}\/#{$denominator} {
+
+            @include breakpoint($breakpoint-name, "only") {
+              flex: 0 0 (100% / $denominator * $divisor);
+              max-width: (100% / $denominator * $divisor);
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  // Modifiers
+  // --------------------------------
+  &--no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .grid__item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

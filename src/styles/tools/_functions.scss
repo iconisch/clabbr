@@ -1,0 +1,70 @@
+// Return value from global variable maps
+// --------------------------------
+@function gutter($key) {
+  @return map-get($gutters, $key);
+}
+
+@function spacing-unit($key) {
+  @return map-get($spacing-units, $key);
+}
+
+@function z-index($key) {
+  @return map-get($z-indexes, $key);
+}
+
+@function font-family($key) {
+  @return map-get($font-families, $key);
+}
+
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@function transition($key) {
+  @return map-get($transitions, $key);
+}
+
+
+// Convert value to string
+// --------------------------------
+@function to-str($value) {
+  @return $value + "";
+}
+
+
+// Abbreviate
+// --------------------------------
+@function abbreviate($term) {
+  $x-i: str-index($term, "x-");
+  $x: if($x-i, str-slice($term, 1, $x-i + 1), "");
+  $c-term: if($x-i, str-slice($term, $x-i + 2), $term);
+
+  $abbreviations: (
+    "top": "top",
+    "bottom": "bot",
+    "left": "lft",
+    "right": "rit",
+    "up": "up",
+    "down": "dwn",
+
+    "tiny": "tny",
+    "small": "sml",
+    "medium": "med",
+    "large": "lrg",
+    "huge": "hug",
+    "giant": "gnt",
+
+    "light": "lit",
+    "dark": "drk"
+  );
+
+  @if map-has-key($abbreviations, $c-term) == false {
+    @error "Can not abbreviate given term";
+  }
+
+  @return $x + map-get($abbreviations, $c-term);
+}

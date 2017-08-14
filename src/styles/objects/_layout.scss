@@ -1,0 +1,19 @@
+.lyt {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+
+  &__itm {
+    flex: 1 1 auto;
+
+    // Modifiers
+    &--fxd {
+      flex: 0 0 auto;
+    }
+
+    &--rit {
+      margin-left: auto;
+    }
+  }
+}

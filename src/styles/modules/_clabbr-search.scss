@@ -1,0 +1,36 @@
+.clabbr-sch {
+  overflow: hidden;
+
+  padding: spacing-unit("2x-small");
+
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(black, 0.1);
+
+  &__hdr {
+    margin-bottom: spacing-unit("2x-small");
+  }
+
+  &__inp {
+    padding: 0 spacing-unit("medium");
+
+    border: 2px solid gainsboro;
+  	border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(black, 0.1);
+
+    font-size: font-size("large");
+    line-height: 76px;
+    text-overflow: ellipsis;
+    color: color("grey-light");
+
+  	@include state("focus") {
+      outline: 0;
+
+      color: color("grey");
+  	}
+  }
+
+  &__rsts {
+
+  }
+}

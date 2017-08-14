@@ -1,0 +1,23 @@
+.wpr {
+  max-width: map-get($wrapper-widths, "large");
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+  // Modifiers
+  // --------------------------------
+  @each $wrapper, $width in $wrapper-widths {
+    &--#{abbreviate($wrapper)} {
+      max-width: $width;
+    }
+  }
+
+  &--lft {
+    margin-left: 0;
+  }
+
+  &--rit {
+    margin-right: 0;
+  }
+}

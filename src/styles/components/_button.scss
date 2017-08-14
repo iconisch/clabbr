@@ -1,0 +1,181 @@
+.button {
+  display: inline-block;
+
+  padding: 0 spacing-unit("small");
+
+  background-color: transparent;
+  border: 0;
+  border-radius: 2px;
+  box-shadow:
+    inset 0 12px 12px rgba(white, 0.1),
+    inset 0 -1px 2px rgba(black, 0.1),
+    0 1px 2px rgba(black, 0.1);
+
+  // text-align: center;
+  font-family: font-family("remo");
+  font-size: font-size("small");
+  font-weight: bold;
+  line-height: spacing-unit("x-large");
+
+  @include state(("hover", "focus")) {
+    outline: 0;
+    box-shadow:
+      inset 0 8px 8px rgba(white, 0.1),
+      inset 0 999px 0 rgba(white, 0.1),
+      inset 0 -1px 2px rgba(black, 0.1),
+      0 1px 2px rgba(black, 0.1);
+
+    text-decoration: none;
+  }
+
+  @include state(("active", "is-disabled")) {
+    box-shadow: inset 0 1px 2px rgba(black, 0.1);
+  }
+
+  @include state("is-disabled") {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &__icon {
+    position: relative;
+    vertical-align: text-bottom; // Best visual vertical alignment
+
+    margin-right: spacing-unit("3x-small");
+
+    opacity: 0.6;
+  }
+
+
+  // Modifiers
+  &--small {
+    padding: 0 spacing-unit("x-small");
+
+    line-height: 36px;
+
+    .button {
+      &__icon {
+        top: -1px; // HACK: Vertical alignment correction
+
+        font-size: font-size("medium")
+      }
+    }
+  }
+
+  &--x-large {
+    font-size: font-size("large");
+    line-height: spacing-unit("3x-large");
+
+    .button {
+      &__icon {
+        font-size: font-size("x-large")
+      }
+    }
+  }
+
+  &--white {
+    background-color: white;
+
+    color: color("grey-light");
+
+    @include state(("hover", "focus")) {
+      color: color("purple");
+    }
+
+    @include state(("active", "disabled")) {
+      box-shadow:
+        inset 0 999px rgba(black, 0.05),
+        inset 0 1px 2px rgba(black, 0.1);
+    }
+  }
+
+  &--primary {
+    background-color: color("primary");
+
+    color: white;
+
+    @include state(("hover", "focus")) {
+      color: white
+    }
+  }
+
+  &--secondary {
+    background-color: color("secondary");
+
+    color: white;
+
+    @include state(("hover", "focus")) {
+      color: white
+    }
+  }
+
+  &--grey {
+    background-color: color("grey-2x-light");
+    box-shadow: none;
+
+    color: color("grey");
+
+    @include state(("hover", "focus")) {
+      box-shadow: inset 0 999px 0 rgba(white, 0.2);
+
+      color: color("purple")
+    }
+
+    @include state(("active", "is-disabled")) {
+      box-shadow:
+        inset 0 999px 0 rgba(black, 0.05),
+        inset 0 1px 2px rgba(black, 0.1);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+
+    &.button {
+
+      @include state(("hover", "focus")) {
+        box-shadow:
+          inset 0 8px 8px rgba(white, 0.1),
+          inset 0 999px 0 rgba(white, 0.1),
+          inset 0 -1px 2px rgba(black, 0.1),
+          0 1px 2px rgba(black, 0.1);
+      }
+
+      @include state(("active", "is-disabled")) {
+        box-shadow: inset 0 1px 2px rgba(black, 0.1);
+      }
+
+      &--primary {
+        box-shadow: inset 0 0 0 2px rgba(color("primary"), 0.2);
+
+        color: color("primary");
+
+        @include state(("hover", "focus")) {
+          background-color: color("primary");
+
+          color: white;
+        }
+      }
+
+      &--secondary {
+        box-shadow: inset 0 0 0 2px rgba(color("secondary"), 0.4);
+
+        color: color("secondary");
+
+        @include state(("hover", "focus")) {
+          background-color: color("secondary");
+
+          color: white;
+        }
+      }
+
+      &--grey {
+        box-shadow: inset 0 0 0 2px rgba(color("grey-2x-light"), 0.8);
+
+        @include state(("hover", "focus")) {
+          background-color: color("grey-2x-light");
+        }
+      }
+    }
+  }
+}

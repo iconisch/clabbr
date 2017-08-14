@@ -1,0 +1,45 @@
+.clabbr {
+
+  &__nom {
+
+  }
+
+  &__abr {
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: color("grey-dark");
+  }
+}
+
+
+// List of clabbrs
+// --------------------------------
+.clabbrs {
+  margin: 0;
+
+  &__itm,
+  &__no-rsts {
+    padding: 0 spacing-unit("medium");
+
+    border-radius: 2px;
+
+    line-height: 80px;
+  }
+
+  &__itm {
+    background-color: white;
+
+    @include state("nth-child(odd)") {
+      background-color: whitesmoke;
+    }
+  }
+
+  &__no-rsts {
+    background-color: whitesmoke;
+
+    text-align: center;
+    font-weight: bold;
+    color: coral;
+  }
+}
