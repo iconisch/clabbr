@@ -8,7 +8,7 @@ const App = () => (
     <header className="u-mar-btm--lrg u-txt-aln--ctr u-clr--wht">
       <h1 className="u-clr--wht">Clabbr</h1>
       <p>
-        Clabbr is a list of commonly used classnames and their three character (max) abbreviations. Its goal is to standardize classname abbreviations.
+        Clabbr is a list of commonly used CSS classnames and their three character (max) abbreviations. Its goal is to standardize classname abbreviations.
       </p>
     </header>
     <section className="clabbr-sch">
