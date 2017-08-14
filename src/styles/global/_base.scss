@@ -66,9 +66,9 @@ body {
 	min-height: 100vh;
 
 	margin: 0;
-	padding: 128px 0;
+	padding: 0;
 
-	background-color: lightskyblue;
+	@include linear-gradient(0deg, darken(lightskyblue, 16%), lightskyblue);
 
 	font-family: font-family("system");
 	font-size: font-size("large");
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 
 	font-family: font-family("system");
-	font-weight: bold;
+	font-weight: normal;
 	color: color("grey-dark");
 
 	@include state("last-child") {

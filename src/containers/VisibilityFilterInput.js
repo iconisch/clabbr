@@ -4,7 +4,7 @@ import Input from '../components/Input';
 
 const mapStateToProps = state => ({
   type: 'text',
-  placeholder: 'Search for classname...',
+  placeholder: 'Search classname...',
   className: 'clabbr-ser__inp'
 });
 

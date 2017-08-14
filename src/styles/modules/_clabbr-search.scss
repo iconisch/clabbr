@@ -5,19 +5,21 @@
 
   background-color: white;
   border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(black, 0.1);
+  box-shadow: 0 1px 2px rgba(black, 0.1);
 
   &__hdr {
     margin-bottom: spacing-unit("2x-small");
   }
 
   &__inp {
-    padding: 0 spacing-unit("medium");
+    padding: 0;
 
     border: 2px solid gainsboro;
   	border-radius: 2px;
 
-    font-size: font-size("large");
+    text-align: center;
+    font-size: font-size("x-large");
+    // font-weight: bold;
     line-height: 76px;
     text-overflow: ellipsis;
     color: color("grey-light");
@@ -27,6 +29,12 @@
 
       color: color("grey");
   	}
+
+    @include breakpoint("small") {
+      padding: 0 spacing-unit("small");
+
+      line-height: 60px;
+    }
   }
 
   &__rsts {

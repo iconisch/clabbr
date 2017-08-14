@@ -8,7 +8,7 @@ const Clabbrs = ({ clabbrs }) => {
     return (
       <ul className="clabbrs">
         <li className="clabbrs__no-rsts">
-          No results
+          ¯\_(ツ)_/¯
         </li>
       </ul>
     );

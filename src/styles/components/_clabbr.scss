@@ -5,7 +5,7 @@
   }
 
   &__abr {
-    font-family: monospace;
+    font-family: font-family("mono");
     font-weight: bold;
     text-transform: uppercase;
     color: color("grey-dark");
@@ -25,6 +25,12 @@
     border-radius: 2px;
 
     line-height: 80px;
+
+    @include breakpoint("small") {
+      padding: 0 spacing-unit("small");
+
+      line-height: 64px;
+    }
   }
 
   &__itm {
