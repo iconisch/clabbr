@@ -1,3 +1,7 @@
 .sxn {
-  padding: spacing-unit("2x-large") spacing-unit("small");
+  padding: 80px spacing-unit("small");
+
+  @include breakpoint("small") {
+    padding: spacing-unit("2x-large") spacing-unit("small");
+  }
 }
