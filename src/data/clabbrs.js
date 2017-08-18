@@ -807,6 +807,50 @@ const rawClabbrs = [
   {
     name: "snapchat",
     abbreviation: "snc"
+  },
+  {
+    name: "board",
+    abbreviation: "brd"
+  },
+  {
+    name: "subject",
+    abbreviation: "sbj"
+  },
+  {
+    name: "priority",
+    abbreviation: "prt"
+  },
+  {
+    name: "issue",
+    abbreviation: "isu"
+  },
+  {
+    name: "case",
+    abbreviation: "cse"
+  },
+  {
+    name: "white",
+    abbreviation: "wht"
+  },
+  {
+    name: "black",
+    abbreviation: "blk"
+  },
+  {
+    name: "open",
+    abbreviation: "opn"
+  },
+  {
+    name: "status",
+    abbreviation: "sts"
+  },
+  {
+    name: "dot",
+    abbreviation: "dot"
+  },
+  {
+    name: "grey",
+    abbreviation: "gry"
   }
 ];
 
