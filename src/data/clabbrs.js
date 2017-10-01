@@ -851,6 +851,14 @@ const rawClabbrs = [
   {
     name: "grey",
     abbreviation: "gry"
+  },
+  {
+    name: "message",
+    abbreviation: "msg"
+  },
+  {
+    name: "response",
+    abbreviation: "rsp"
   }
 ];
 
