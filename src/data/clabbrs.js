@@ -178,11 +178,11 @@ const rawClabbrs = [
   },
   {
     name: "accordion",
-    abbreviation: "acc"
+    abbreviation: "aco"
   },
   {
     name: "account",
-    abbreviation: "act"
+    abbreviation: "acc"
   },
   {
     name: "audio",
@@ -434,7 +434,7 @@ const rawClabbrs = [
   },
   {
     name: "active",
-    abbreviation: "atv"
+    abbreviation: "act"
   },
   {
     name: "focus",
@@ -859,6 +859,54 @@ const rawClabbrs = [
   {
     name: "response",
     abbreviation: "rsp"
+  },
+  {
+    name: "place",
+    abbreviation: "plc"
+  },
+  {
+    name: "temporary",
+    abbreviation: "tmp"
+  },
+  {
+    name: "holder",
+    abbreviation: "hld"
+  },
+  {
+    name: "parent",
+    abbreviation: "par"
+  },
+  {
+    name: "child",
+    abbreviation: "cld"
+  },
+  {
+    name: "sibling",
+    abbreviation: "sib"
+  },
+  {
+    name: "standard",
+    abbreviation: "std"
+  },
+  {
+    name: "odd",
+    abbreviation: "odd"
+  },
+  {
+    name: "even",
+    abbreviation: "evn"
+  },
+  {
+    name: "toggle",
+    abbreviation: "tog"
+  },
+  {
+    name: "activate",
+    abbreviation: "atv"
+  },
+  {
+    name: "deactivate",
+    abbreviation: "dtv"
   }
 ];
 
